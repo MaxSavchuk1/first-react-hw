@@ -59,20 +59,13 @@ class UserList extends Component {
 
 	usersMap = (u, i) => {
 		const { users } = this.state;
-		const selectedUsers = [...users];
-		const selectUser = () => {
-			selectedUsers[i].isSelected = !selectedUsers[i].isSelected;
-			this.setState({ users: selectedUsers });
-		};
 		const deleteUser = () => {
-			const newUsers = [...selectedUsers];
-			selectedUsers.splice(i, 1);
-			this.setState({ selectedUsers: newUsers });
+			const newUsers = [...users];
+			newUsers.splice(i, 1);
+			this.setState({ users: newUsers });
 		};
 
-		return (
-			<UserListItem key={u.id} user={u} del={deleteUser} select={selectUser} />
-		);
+		return <UserListItem key={u.id} user={u} del={deleteUser} />;
 	};
 
 	render() {

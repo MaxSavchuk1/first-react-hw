@@ -2,15 +2,14 @@ import React from "react";
 
 function UserListItem(props) {
 	const {
-		user: { id, firstName, lastName, age, imgSrc, isSelected },
+		user: { id, firstName, lastName, age, imgSrc },
 		del,
-		select,
 	} = props;
 
 	const selectedStyle = { boxShadow: "0px 0px 10px red" };
 
 	return (
-		<li style={isSelected ? selectedStyle : null} onClick={select}>
+		<li>
 			<img src={imgSrc} alt={id} />
 			<div className="userInfo">
 				<span>

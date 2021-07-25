@@ -1,8 +1,8 @@
 import "./App.css";
-import UserList from "./components/UserListHW";
+import Calendar from "./components/Calendar";
 
 function App() {
-  return <UserList />;
+	return <Calendar />;
 }
 
 export default App;

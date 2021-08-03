@@ -1,0 +1,9 @@
+@import "../../../common/styles/templates";
+@import "../../../common/styles/vars";
+
+.monthContainer {
+	@extend %flex-container;
+	width: $calendar-component-width;
+	height: $calendar-component-height;
+	background-color: mintcream;
+}

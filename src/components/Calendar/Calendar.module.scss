@@ -1,0 +1,6 @@
+@import "../../common/styles/templates";
+
+.calendarContainer {
+	@extend %flex-container;
+	border: 5px solid darkcyan;
+}

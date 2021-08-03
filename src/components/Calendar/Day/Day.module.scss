@@ -1,0 +1,22 @@
+@import "../../../common/styles/templates";
+@import "../../../common/styles/vars";
+
+.dayContainer {
+	@extend %flex-container;
+	flex-direction: column;
+	width: $calendar-component-width;
+	height: $calendar-component-height;
+	background-color: rgb(3, 207, 207);
+	* {
+		color: white;
+	}
+	div:first-child {
+		margin-bottom: auto;
+		margin-top: $calendar-component-height / 10;
+	}
+	div:last-child {
+		font-size: 7em;
+		margin: auto;
+		position: absolute;
+	}
+}

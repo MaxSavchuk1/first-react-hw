@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getYear, getMonth } from "date-fns";
+import styles from "./SelectForm.module.scss";
 
 class SelectForm extends Component {
 	constructor(props) {
@@ -32,7 +33,11 @@ class SelectForm extends Component {
 		const { monthValue, yearValue } = this.state;
 		const { dateChange } = this.props;
 		return (
-			<form onSubmit={this.sumbitHndlr} onChange={this.dateChangeHndlr}>
+			<form
+				onSubmit={this.sumbitHndlr}
+				onChange={this.dateChangeHndlr}
+				className={styles.selectContainer}
+			>
 				<select name="monthValue" value={monthValue}>
 					<option value="0">January</option>
 					<option value="1">February</option>

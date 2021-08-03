@@ -1,0 +1,14 @@
+@import "../../../common/styles/templates";
+@import "../../../common/styles/vars";
+
+.selectContainer {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: $calendar-component-size * 2;
+
+	* {
+		margin: 5px;
+		flex: 1 0 20%;
+	}
+}

@@ -1,5 +1,12 @@
+@import "./vars";
+
 %flex-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+%cell-size {
+	width: $calendar-component-size / 9;
+	height: $calendar-component-size / 10;
 }

@@ -1,6 +1,8 @@
 @import "../../common/styles/templates";
+@import "../../common/styles/vars";
 
 .calendarContainer {
 	@extend %flex-container;
-	border: 5px solid darkcyan;
+	flex-wrap: wrap;
+	border: 7px solid $color-border;
 }

@@ -4,19 +4,20 @@
 .dayContainer {
 	@extend %flex-container;
 	flex-direction: column;
-	width: $calendar-component-width;
-	height: $calendar-component-height;
+	width: $calendar-component-size;
+	height: $calendar-component-size;
 	background-color: rgb(3, 207, 207);
 	* {
 		color: white;
 	}
 	div:first-child {
 		margin-bottom: auto;
-		margin-top: $calendar-component-height / 10;
+		margin-top: $calendar-component-size / 10;
+		font-size: $calendar-component-size / 15;
+		font-weight: 300;
 	}
 	div:last-child {
-		font-size: 7em;
-		margin: auto;
+		font-size: $calendar-component-size / 3;
 		position: absolute;
 	}
 }

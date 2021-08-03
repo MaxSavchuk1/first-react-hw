@@ -27,7 +27,7 @@ function Month(props) {
 
 	return (
 		<section className={styles.monthContainer}>
-			<table>
+			<table className={styles.monthTable}>
 				<caption>{format(date, "MMMM y")}</caption>
 				<thead>
 					<tr>

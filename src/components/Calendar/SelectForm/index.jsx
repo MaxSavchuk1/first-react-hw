@@ -60,6 +60,8 @@ class SelectForm extends Component {
 					name="yearValue"
 					type="number"
 					value={yearValue}
+					min="1"
+					max="9999"
 					onChange={this.dateChangeHndlr}
 				/>
 				<button

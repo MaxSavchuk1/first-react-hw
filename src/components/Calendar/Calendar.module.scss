@@ -3,6 +3,8 @@
 
 .calendarContainer {
 	@extend %flex-container;
-	flex-wrap: wrap;
 	border: 7px solid $color-border;
+	@media screen and (max-width: $calendar-component-size * 2.1) {
+		flex-direction: column;
+	}
 }

@@ -5,10 +5,15 @@
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	max-width: $calendar-component-size * 2;
-
 	* {
 		margin: 5px;
 		flex: 1 0 20%;
+		font-size: $calendar-component-size / 15;
+	}
+	@media screen and (max-width: $calendar-component-size * 2.1) {
+		flex-direction: column;
+		* {
+			flex: none;
+		}
 	}
 }

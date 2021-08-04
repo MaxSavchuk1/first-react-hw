@@ -38,7 +38,11 @@ class SelectForm extends Component {
 				onChange={this.dateChangeHndlr}
 				className={styles.selectContainer}
 			>
-				<select name="monthValue" value={monthValue}>
+				<select
+					name="monthValue"
+					value={monthValue}
+					onChange={this.dateChangeHndlr}
+				>
 					<option value="0">January</option>
 					<option value="1">February</option>
 					<option value="2">March</option>

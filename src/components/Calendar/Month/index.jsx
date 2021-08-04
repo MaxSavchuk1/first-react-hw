@@ -1,6 +1,7 @@
 import React from "react";
 import { format, getDaysInMonth, getDay, getMonth, getYear } from "date-fns";
 import styles from "./Month.module.scss";
+import PropTypes from "prop-types";
 
 function Month(props) {
 	const { date } = props;
@@ -45,5 +46,9 @@ function Month(props) {
 		</section>
 	);
 }
+
+Month.propTypes = {
+	date: PropTypes.instanceOf(Date).isRequired,
+};
 
 export default Month;

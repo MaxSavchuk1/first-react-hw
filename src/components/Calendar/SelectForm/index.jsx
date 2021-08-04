@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getYear, getMonth } from "date-fns";
 import styles from "./SelectForm.module.scss";
+import PropTypes from "prop-types";
 
 class SelectForm extends Component {
 	constructor(props) {
@@ -77,5 +78,10 @@ class SelectForm extends Component {
 		);
 	}
 }
+
+SelectForm.propTypes = {
+	date: PropTypes.instanceOf(Date).isRequired,
+	dateChange: PropTypes.func.isRequired,
+};
 
 export default SelectForm;

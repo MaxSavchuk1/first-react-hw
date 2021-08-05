@@ -19,9 +19,9 @@ function Month(props) {
 
 	const creationTable = (el, i) => <td key={i}>{el}</td>;
 
-	const newArray = [];
+	const fullMonth = [];
 	for (let i = 0; i < monthArray.length; i = i + 7) {
-		newArray.push(
+		fullMonth.push(
 			<tr key={i}>{monthArray.map(creationTable).slice(i, i + 7)}</tr>
 		);
 	}
@@ -41,7 +41,7 @@ function Month(props) {
 						<th>S</th>
 					</tr>
 				</thead>
-				<tbody>{newArray}</tbody>
+				<tbody>{fullMonth}</tbody>
 			</table>
 		</section>
 	);

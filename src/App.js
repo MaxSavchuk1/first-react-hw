@@ -1,8 +1,8 @@
 import "./App.css";
-import Calendar from "./components/Calendar";
+import SignUpForm from "./components/SignUpForm";
 
 function App() {
-	return <Calendar />;
+	return <SignUpForm />;
 }
 
 export default App;

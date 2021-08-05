@@ -1,0 +1,43 @@
+@import "../../common/styles/templates";
+@import "../../common/styles/vars";
+
+.signUpForm {
+	@extend %flex-container;
+	flex-direction: column;
+
+	border: 7px solid rgb(255, 255, 255);
+	border-radius: 20px;
+	background-color: rgb(146, 255, 250);
+	box-shadow: 0px 0px 15px black;
+
+	width: 600px;
+	height: 300px;
+
+	* {
+		margin: auto 0;
+		font-size: 1.2em;
+	}
+
+	label {
+		@extend %flex-container;
+		width: 80%;
+	}
+
+	button {
+		width: 80%;
+		height: 2em;
+	}
+}
+
+.inputs {
+	width: 70%;
+	margin-left: auto;
+}
+
+.valid {
+	background-color: lightgreen;
+}
+
+.invalid {
+	background-color: lightcoral;
+}

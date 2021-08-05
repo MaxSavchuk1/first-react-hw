@@ -26,6 +26,7 @@ class SelectForm extends Component {
 	resetHndlr = (e) => {
 		const currentMonth = getMonth(new Date());
 		const currentYear = getYear(new Date());
+
 		this.setState({ monthValue: currentMonth, yearValue: currentYear });
 		this.props.dateChange(currentYear, currentMonth);
 	};

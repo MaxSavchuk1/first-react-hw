@@ -22,13 +22,19 @@ class SignUpForm extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 
+	inputNameHndlr = (e) => {
+		this.setState({
+			name: e.target.value,
+			isCorrectName: /[A-Z][a-z]{1,25}/.test(e.target.value),
+		});
+	};
+
 	render() {
 		const { name, email, password, isCorrectName } = this.state;
 
-		const nameStyle = classNames(
-			styles.inputs,
-			isCorrectName ? styles.valid : styles.invalid
-		);
+		const nameStyle = classNames(styles.inputs, {
+			[isCorrectName ? styles.valid : styles.invalid]: name,
+		});
 
 		return (
 			<form onSubmit={this.submitCancel} className={styles.signUpForm}>
@@ -38,8 +44,8 @@ class SignUpForm extends Component {
 						type="text"
 						className={nameStyle}
 						value={name}
-						name="name"
-						onChange={this.inputChangeHndlr}
+						onChange={this.inputNameHndlr}
+						required
 					/>
 				</label>
 				<label className={styles.formLabel}>
@@ -60,6 +66,7 @@ class SignUpForm extends Component {
 						value={password}
 						name="password"
 						onChange={this.inputChangeHndlr}
+						required
 					/>
 				</label>
 				<button>Sign up</button>

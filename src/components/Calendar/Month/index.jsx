@@ -1,5 +1,14 @@
-import React from "react";
-import { format, getDaysInMonth, getDay, getMonth, getYear } from "date-fns";
+import React, { useEffect } from "react";
+import {
+	format,
+	getDaysInMonth,
+	getDay,
+	getMonth,
+	getYear,
+	isSameMonth,
+	isSameYear,
+	getDate,
+} from "date-fns";
 import styles from "./Month.module.scss";
 import PropTypes from "prop-types";
 
@@ -25,6 +34,21 @@ function Month(props) {
 			<tr key={i}>{monthArray.map(creationTable).slice(i, i + 7)}</tr>
 		);
 	}
+
+	useEffect(() => {
+		const daysInMonth = document.getElementsByTagName("td");
+		for (let i of daysInMonth) {
+			if (
+				Number(i.innerText) === getDate(new Date()) &&
+				isSameMonth(date, new Date()) &&
+				isSameYear(date, new Date())
+			) {
+				i.style.backgroundColor = "grey";
+			} else {
+				i.style.backgroundColor = "";
+			}
+		}
+	});
 
 	return (
 		<section className={styles.monthContainer}>

@@ -1,27 +1,27 @@
-import "./App.css";
-import Header from "./components/Header";
-import HomePage from "./pages/HomePage";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ComponentsPage from "./pages/ComponentsPage";
+import './App.css';
+import Header from './components/Header';
+import HomePage from './pages/HomePage';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ComponentsPage from './pages/ComponentsPage';
 
-function App() {
-	return (
-		<Router>
-			<Header />
+function App () {
+  return (
+    <Router>
+      <Header />
 
-			<Switch>
-				<Route exact path="/">
-					<HomePage />
-				</Route>
-				<Route path="/components">
-					<ComponentsPage />
-				</Route>
-			</Switch>
+      <Switch>
+        <Route exact path='/'>
+          <HomePage />
+        </Route>
+        <Route path='/components'>
+          <ComponentsPage />
+        </Route>
+      </Switch>
 
-			<Footer />
-		</Router>
-	);
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

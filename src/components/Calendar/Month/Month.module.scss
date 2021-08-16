@@ -1,40 +1,40 @@
-@import "../../../common/styles/templates";
-@import "../../../common/styles/vars";
+@import '../../../common/styles/templates';
+@import '../../../common/styles/vars';
 
 .monthContainer {
-	@extend %flex-container;
-	width: $calendar-component-size;
-	height: $calendar-component-size;
-	background-color: mintcream;
-	* {
-		font-size: $calendar-component-size / 15;
-		text-align: center;
-	}
+  @extend %flex-container;
+  width: $calendar-component-size;
+  height: $calendar-component-size;
+  background-color: mintcream;
+  * {
+    font-size: $calendar-component-size / 15;
+    text-align: center;
+  }
 }
 
 .monthTable {
-	@extend %flex-container;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
-	border-collapse: collapse;
-	caption {
-		color: $color-border;
-		font-weight: bold;
-		margin-bottom: auto;
-		margin-top: $calendar-component-size / 10;
-	}
-	th {
-		color: red;
-		@extend %cell-size;
-	}
-	td {
-		color: darkgray;
-		@extend %cell-size;
-	}
+  @extend %flex-container;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  caption {
+    color: $color-border;
+    font-weight: bold;
+    margin-bottom: auto;
+    margin-top: $calendar-component-size / 10;
+  }
+  th {
+    color: red;
+    @extend %cell-size;
+  }
+  td {
+    color: darkgray;
+    @extend %cell-size;
+  }
 }
 
 .currentDay {
-	border: 2px solid red;
-	border-radius: 50%;
+  border: 2px solid red;
+  border-radius: 50%;
 }

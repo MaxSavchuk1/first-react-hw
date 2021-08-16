@@ -1,77 +1,77 @@
-import React, { Component } from "react";
-import classNames from "classnames";
-import styles from "./SignUpForm.module.scss";
+import React, { Component } from 'react';
+import classNames from 'classnames';
+import styles from './SignUpForm.module.scss';
 
 class SignUpForm extends Component {
-	constructor(props) {
-		super(props);
+  constructor (props) {
+    super(props);
 
-		this.state = {
-			name: "",
-			email: "",
-			password: "",
-			isCorrectName: false,
-		};
-	}
+    this.state = {
+      name: '',
+      email: '',
+      password: '',
+      isCorrectName: false,
+    };
+  }
 
-	submitCancel = (e) => {
-		e.preventDefault();
-	};
+  submitCancel = e => {
+    e.preventDefault();
+  };
 
-	inputChangeHndlr = (e) => {
-		this.setState({ [e.target.name]: e.target.value });
-	};
+  inputChangeHndlr = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-	inputNameHndlr = (e) => {
-		this.setState({
-			name: e.target.value,
-			isCorrectName: /[A-Z][a-z]{1,25}/.test(e.target.value),
-		});
-	};
+  inputNameHndlr = e => {
+    this.setState({
+      name: e.target.value,
+      isCorrectName: /[A-Z][a-z]{1,25}/.test(e.target.value),
+    });
+  };
 
-	render() {
-		const { name, email, password, isCorrectName } = this.state;
+  render () {
+    const { name, email, password, isCorrectName } = this.state;
 
-		const nameStyle = classNames(styles.inputs, {
-			[isCorrectName ? styles.valid : styles.invalid]: name,
-		});
+    const nameStyle = classNames(styles.inputs, {
+      [isCorrectName ? styles.valid : styles.invalid]: name,
+    });
 
-		return (
-			<form onSubmit={this.submitCancel} className={styles.signUpForm}>
-				<label className={styles.formLabel}>
-					Name
-					<input
-						type="text"
-						className={nameStyle}
-						value={name}
-						onChange={this.inputNameHndlr}
-						required
-					/>
-				</label>
-				<label className={styles.formLabel}>
-					Email
-					<input
-						type="email"
-						className={styles.inputs}
-						value={email}
-						name="email"
-						onChange={this.inputChangeHndlr}
-					/>
-				</label>
-				<label className={styles.formLabel}>
-					Password
-					<input
-						type="password"
-						className={styles.inputs}
-						value={password}
-						name="password"
-						onChange={this.inputChangeHndlr}
-						required
-					/>
-				</label>
-				<button>Sign up</button>
-			</form>
-		);
-	}
+    return (
+      <form onSubmit={this.submitCancel} className={styles.signUpForm}>
+        <label className={styles.formLabel}>
+          Name
+          <input
+            type='text'
+            className={nameStyle}
+            value={name}
+            onChange={this.inputNameHndlr}
+            required
+          />
+        </label>
+        <label className={styles.formLabel}>
+          Email
+          <input
+            type='email'
+            className={styles.inputs}
+            value={email}
+            name='email'
+            onChange={this.inputChangeHndlr}
+          />
+        </label>
+        <label className={styles.formLabel}>
+          Password
+          <input
+            type='password'
+            className={styles.inputs}
+            value={password}
+            name='password'
+            onChange={this.inputChangeHndlr}
+            required
+          />
+        </label>
+        <button>Sign up</button>
+      </form>
+    );
+  }
 }
 export default SignUpForm;

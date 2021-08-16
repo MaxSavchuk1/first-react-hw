@@ -1,14 +1,14 @@
-@import "../../common/styles/templates";
-@import "../../common/styles/vars";
+@import '../../common/styles/templates';
+@import '../../common/styles/vars';
 
 .footer {
-	@extend %flex-container;
-	margin-top: auto;
+  @extend %flex-container;
+  margin-top: auto;
 
-	background-color: $static-element-bgcolor;
+  background-color: $static-element-bgcolor;
 
-	height: $static-element-size;
-	a {
-		color: $static-element-font-color;
-	}
+  height: $static-element-size;
+  a {
+    color: $static-element-font-color;
+  }
 }

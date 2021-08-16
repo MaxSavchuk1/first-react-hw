@@ -1,10 +1,10 @@
-@import "../../common/styles/templates";
-@import "../../common/styles/vars";
+@import '../../common/styles/templates';
+@import '../../common/styles/vars';
 
 .calendarContainer {
-	@extend %flex-container;
-	border: 7px solid $color-border;
-	@media screen and (max-width: $calendar-component-size * 2.1) {
-		flex-direction: column;
-	}
+  @extend %flex-container;
+  border: 7px solid $color-border;
+  @media screen and (max-width: $calendar-component-size * 2.1) {
+    flex-direction: column;
+  }
 }

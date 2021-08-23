@@ -10,8 +10,8 @@
   background-color: rgb(146, 255, 250);
   box-shadow: 0px 0px 15px black;
 
-  width: 600px;
-  height: 300px;
+  width: $signup-form-width;
+  height: $signup-form-width / 2;
 
   * {
     margin: auto 0;
@@ -27,11 +27,14 @@
     width: 80%;
     height: 2em;
   }
-}
 
-.inputs {
-  width: 70%;
-  margin-left: auto;
+  input {
+    width: 70%;
+    margin-left: auto;
+  }
+  @media screen and (max-width: $signup-form-width * 1.1) {
+    width: 100%;
+  }
 }
 
 .valid {

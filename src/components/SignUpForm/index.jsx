@@ -25,7 +25,7 @@ class SignUpForm extends Component {
   inputNameHndlr = e => {
     this.setState({
       name: e.target.value,
-      isCorrectName: /[A-Z][a-z]{1,25}/.test(e.target.value),
+      isCorrectName: /^[A-Z][a-z]{1,25}$/.test(e.target.value),
     });
   };
 
@@ -52,7 +52,6 @@ class SignUpForm extends Component {
           Email
           <input
             type='email'
-            className={styles.inputs}
             value={email}
             name='email'
             onChange={this.inputChangeHndlr}
@@ -62,14 +61,13 @@ class SignUpForm extends Component {
           Password
           <input
             type='password'
-            className={styles.inputs}
             value={password}
             name='password'
             onChange={this.inputChangeHndlr}
             required
           />
         </label>
-        <button>Sign up</button>
+        <button type='submit'>Sign up</button>
       </form>
     );
   }

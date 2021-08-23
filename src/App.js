@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ComponentsPage from './pages/ComponentsPage';
 import NotFound from './components/NotFound';
+import LoginPage from './pages/LoginPage';
+import RegistrationPage from './pages/RegistrationPage';
 
 function App () {
   return (
@@ -16,6 +18,12 @@ function App () {
         </Route>
         <Route path='/components'>
           <ComponentsPage />
+        </Route>
+        <Route path='/login'>
+          <LoginPage />
+        </Route>
+        <Route path='/register'>
+          <RegistrationPage />
         </Route>
         <Route path={'*'} component={NotFound} />;
       </Switch>

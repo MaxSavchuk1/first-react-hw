@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom';
 
 function Header () {
   return (
-    <div className={styles.header}>
-      <Link to='/'>Home</Link>
-      <Link to='/components'>Components</Link>
-    </div>
+    <nav className={styles.header}>
+      <ul>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/components'>Components</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 

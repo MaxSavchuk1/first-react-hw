@@ -10,3 +10,11 @@
   width: $calendar-component-size / 9;
   height: $calendar-component-size / 10;
 }
+
+%panels-color {
+  background-color: $static-element-bgcolor;
+  height: $static-element-size;
+  & a {
+    color: $static-element-font-color;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouteMatch, Link, Switch, Route } from 'react-router-dom';
 import Calendar from '../../components/Calendar';
+import NotFound from '../../components/NotFound';
 import SignUpForm from '../../components/SignUpForm';
 import UserList from '../../components/UserList';
 import styles from './ComponentsPage.module.scss';
@@ -32,6 +33,7 @@ function ComponentsPage () {
           <Route path={`${path}/userlist`}>
             <UserList />
           </Route>
+          <Route path={`${path}/*`} component={NotFound} />;
         </Switch>
       </div>
     </div>

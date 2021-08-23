@@ -2,4 +2,6 @@
 
 .homePageContent {
   @extend %flex-container;
+  margin: auto;
+  font-size: 3em;
 }

@@ -3,12 +3,6 @@
 
 .footer {
   @extend %flex-container;
+  @extend %panels-color;
   margin-top: auto;
-
-  background-color: $static-element-bgcolor;
-
-  height: $static-element-size;
-  a {
-    color: $static-element-font-color;
-  }
 }

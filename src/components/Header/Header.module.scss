@@ -2,18 +2,23 @@
 @import '../../common/styles/vars';
 
 .header {
-  @extend %flex-container;
-  justify-content: space-around;
-  margin-bottom: auto;
+  @extend %panels-color;
 
-  color: $static-element-font-color;
-  background-color: $static-element-bgcolor;
-
-  height: $static-element-size;
   a {
-    color: $static-element-font-color;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
+  }
+
+  ul {
+    @extend %flex-container;
+    justify-content: space-around;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
   }
 }

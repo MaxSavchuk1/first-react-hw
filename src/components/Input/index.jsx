@@ -24,6 +24,9 @@ function Input (props) {
   return (
     <div className={styles.inputContainer}>
       <input {...field} {...props} className={inputClass} />
+      <div className={styles.errorMessage}>
+        {error && touched && <span>{error}</span>}
+      </div>
     </div>
   );
 }

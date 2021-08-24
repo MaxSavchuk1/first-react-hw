@@ -4,6 +4,11 @@
 .inputContainer {
   @extend %flex-container;
   flex-direction: column;
+  .errorMessage {
+    @extend %flex-container;
+    height: 35px;
+    color: rgb(250, 226, 226);
+  }
 }
 
 .input {
@@ -11,7 +16,6 @@
   border: 3px solid #3ea9f5;
   border-radius: 5px;
   padding: 20px;
-  margin-bottom: 15px;
   width: 100%;
   color: lavender;
   font-size: 1.2em;

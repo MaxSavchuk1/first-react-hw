@@ -1,10 +1,17 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
 import Input from '../Input';
-// import {} from '../../utils/validationSchemas';
+import { SIGNUP_SCHEMA } from '../../utils/validationSchemas';
 
 function RegistrationForm () {
-  const initialValues = {};
+  const initialValues = {
+    firstName: '',
+    lastName: '',
+    displayName: '',
+    email: '',
+    password: '',
+    passwordConfirm: '',
+  };
 
   const submitHandler = (values, formikBag) => {
     formikBag.resetForm();
@@ -14,16 +21,20 @@ function RegistrationForm () {
     <Formik
       initialValues={initialValues}
       onSubmit={submitHandler}
-      // validationSchema={}
+      validationSchema={SIGNUP_SCHEMA}
     >
       <Form>
-        <Input />
-        <Input />
-        <Input />
-        <Input />
-        <Input />
-        <Input />
-        <button type='submit'>REGISTER</button>
+        <Input name='firstName' type='text' placeholder='First name' />
+        <Input name='lastName' type='text' placeholder='Last name' />
+        <Input name='displayName' type='text' placeholder='Display Name' />
+        <Input name='email' type='email' placeholder='Email Address' />
+        <Input name='password' type='password' placeholder='Password' />
+        <Input
+          name='passwordConfirm'
+          type='password'
+          placeholder='Password Confirmation'
+        />
+        <button type='submit'>Create account</button>
       </Form>
     </Formik>
   );

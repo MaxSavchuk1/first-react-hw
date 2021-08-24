@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRouteMatch, Link, Switch, Route } from 'react-router-dom';
 import Calendar from '../../components/Calendar';
-import LoginForm from '../../components/LoginForm';
 import NotFound from '../../components/NotFound';
 import SignUpForm from '../../components/SignUpForm';
 import UserList from '../../components/UserList';

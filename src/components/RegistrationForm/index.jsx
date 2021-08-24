@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Formik } from 'formik';
 import Input from '../Input';
 import { SIGNUP_SCHEMA } from '../../utils/validationSchemas';
+import styles from './RegistrationForm.module.scss';
 
 function RegistrationForm () {
   const initialValues = {
@@ -18,25 +19,36 @@ function RegistrationForm () {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={submitHandler}
-      validationSchema={SIGNUP_SCHEMA}
-    >
-      <Form>
-        <Input name='firstName' type='text' placeholder='First name' />
-        <Input name='lastName' type='text' placeholder='Last name' />
-        <Input name='displayName' type='text' placeholder='Display Name' />
-        <Input name='email' type='email' placeholder='Email Address' />
-        <Input name='password' type='password' placeholder='Password' />
-        <Input
-          name='passwordConfirm'
-          type='password'
-          placeholder='Password Confirmation'
-        />
-        <button type='submit'>Create account</button>
-      </Form>
-    </Formik>
+    <div className={styles.formContainer}>
+      <h2>CREATE AN ACCOUNT</h2>
+      <h4>We always keep your name and email address private.</h4>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={submitHandler}
+        validationSchema={SIGNUP_SCHEMA}
+      >
+        <Form>
+          <div className={styles.inputsContainer}>
+            <Input name='firstName' type='text' placeholder='First name' />
+            <Input name='lastName' type='text' placeholder='Last name' />
+          </div>
+          <div className={styles.inputsContainer}>
+            <Input name='displayName' type='text' placeholder='Display Name' />
+            <Input name='email' type='email' placeholder='Email Address' />
+          </div>
+          <div className={styles.inputsContainer}>
+            <Input name='password' type='password' placeholder='Password' />
+            <Input
+              name='passwordConfirm'
+              type='password'
+              placeholder='Password Confirmation'
+            />
+          </div>
+
+          <button type='submit'>Create account</button>
+        </Form>
+      </Formik>
+    </div>
   );
 }
 

@@ -18,3 +18,9 @@
     color: $static-element-font-color;
   }
 }
+
+%login-signup-style {
+  height: 100vh - $static-element-size;
+  width: 100%;
+  background-color: #3ea9f5;
+}

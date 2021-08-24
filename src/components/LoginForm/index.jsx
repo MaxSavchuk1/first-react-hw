@@ -15,7 +15,7 @@ function LoginForm () {
   };
 
   return (
-    <div>
+    <div className={styles.formContainer}>
       <h2>login to your account</h2>
       <Formik
         initialValues={initialValues}
@@ -25,6 +25,10 @@ function LoginForm () {
         <Form>
           <Input name='email' type='email' placeholder='E-mail' />
           <Input name='password' type='password' placeholder='Password' />
+          <div className={styles.stubElement}>
+            <span>Remember me?</span>
+            <span>Forgot password?</span>
+          </div>
           <button type='submit'>LOGIN</button>
         </Form>
       </Formik>

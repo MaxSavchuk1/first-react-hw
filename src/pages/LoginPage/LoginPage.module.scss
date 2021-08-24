@@ -1,8 +1,7 @@
 @import '../../common/styles/templates';
+@import '../../common/styles/vars';
 
 .loginFormContainer {
   @extend %flex-container;
-  height: 650px; //temp
-  width: 100%;
-  background-color: #3ea9f5;
+  @extend %login-signup-style;
 }

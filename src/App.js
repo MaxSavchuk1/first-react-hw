@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ComponentsPage from './pages/ComponentsPage';
 import NotFound from './components/NotFound';
@@ -28,7 +28,7 @@ function App () {
         <Route path={'*'} component={NotFound} />;
       </Switch>
 
-      <Footer />
+      {/* <Footer />  тут пока проблема со стилями...*/}
     </Router>
   );
 }

@@ -16,7 +16,6 @@ function LoginForm () {
 
   return (
     <div className={styles.formContainer}>
-      <h2>login to your account</h2>
       <Formik
         initialValues={initialValues}
         onSubmit={submitHandler}

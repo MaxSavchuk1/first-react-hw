@@ -2,27 +2,12 @@
 @import '../../common/styles/vars';
 
 .formContainer {
-  // @extend %flex-container;
-  // flex-direction: column;
-  // flex-wrap: wrap;
-
   width: 600px;
-
-  h2 {
-    @extend %header-styles;
-    font-size: 36px;
-    text-transform: uppercase;
-  }
-
-  h4 {
-    @extend %header-styles;
-    margin: 10px;
-    font-size: 18px;
-  }
 
   .inputsContainer {
     @extend %flex-container;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   button {

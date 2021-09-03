@@ -5,11 +5,6 @@
   width: 600px;
   margin: 0 20px;
 
-  h2 {
-    @extend %header-styles;
-    font-size: 36px;
-    text-transform: uppercase;
-  }
   button {
     @extend %flex-container;
     @extend %button-style-login-signup;

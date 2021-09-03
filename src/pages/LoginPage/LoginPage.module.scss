@@ -4,4 +4,11 @@
 .loginFormContainer {
   @extend %flex-container;
   @extend %login-signup-style;
+  flex-direction: column;
+
+  h2 {
+    @extend %header-styles;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
 }

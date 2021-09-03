@@ -20,8 +20,6 @@ function RegistrationForm () {
 
   return (
     <div className={styles.formContainer}>
-      <h2>CREATE AN ACCOUNT</h2>
-      <h4>We always keep your name and email address private.</h4>
       <Formik
         initialValues={initialValues}
         onSubmit={submitHandler}

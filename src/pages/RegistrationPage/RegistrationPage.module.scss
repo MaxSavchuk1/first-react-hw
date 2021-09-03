@@ -4,4 +4,18 @@
 .regFormContainer {
   @extend %flex-container;
   @extend %login-signup-style;
+  flex-direction: column;
+  h2 {
+    @extend %header-styles;
+    margin: 20px 0px 10px;
+    font-size: 38px;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    @extend %header-styles;
+    margin: 10px 10px 32px;
+    font-size: 18px;
+    font-weight: initial;
+  }
 }

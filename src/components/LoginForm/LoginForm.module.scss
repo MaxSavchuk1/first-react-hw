@@ -2,20 +2,21 @@
 @import '../../common/styles/vars';
 
 .formContainer {
-  width: 600px;
-  margin: 0 20px;
-
-  button {
-    @extend %flex-container;
-    @extend %button-style-login-signup;
-  }
+  @extend %form-container-in-login-signup;
 }
 
-.stubElement {
+.options {
   @extend %flex-container;
   justify-content: space-between;
   color: white;
-  font-size: 0.8em;
-  margin-bottom: 25px;
-  cursor: pointer; // :D
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 15px;
+  }
+}
+
+.remembering {
+  @extend %element-with-checkbox;
 }

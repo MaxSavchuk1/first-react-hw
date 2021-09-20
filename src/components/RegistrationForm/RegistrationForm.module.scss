@@ -2,16 +2,35 @@
 @import '../../common/styles/vars';
 
 .formContainer {
-  width: 600px;
+  @extend %form-container-in-login-signup;
+}
 
-  .inputsContainer {
-    @extend %flex-container;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+.inputsContainer {
+  @extend %flex-container;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-  button {
-    @extend %flex-container;
-    @extend %button-style-login-signup;
+.roleSelect {
+  @extend %flex-container;
+  justify-content: flex-start;
+  padding: 5px 14px 18px;
+  min-height: 80px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  flex-wrap: wrap;
+  cursor: pointer;
+  p {
+    @extend %paragraph-style-in-regform;
   }
+  p:first-of-type {
+    font-size: 1.4em;
+    font-weight: normal;
+    padding-left: 5px;
+  }
+}
+
+.allowSpam {
+  @extend %element-with-checkbox;
+  cursor: pointer;
 }

@@ -20,7 +20,7 @@
 }
 
 %login-signup-style {
-  height: 100vh - $static-element-size;
+  min-height: 100vh - $static-element-size;
   width: 100%;
   background-color: #3ea9f5;
 }
@@ -41,4 +41,35 @@
   color: white;
   font-size: 1.2em;
   cursor: pointer;
+}
+
+%paragraph-style-in-regform {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: lighter;
+  padding-left: 20px;
+  color: white;
+}
+
+%element-with-checkbox {
+  @extend %flex-container;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  p {
+    margin: 0;
+    padding-left: 20px;
+    color: white;
+  }
+}
+
+%form-container-in-login-signup {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 20px;
+
+  button {
+    @extend %flex-container;
+    @extend %button-style-login-signup;
+    margin-bottom: 100px;
+  }
 }

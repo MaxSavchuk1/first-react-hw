@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './HomePage.module.scss';
 import 'animate.css';
+import TestStyles from '../../components/TestStyles';
 
 function HomePage () {
   const animationOnLoad = [
@@ -18,10 +19,11 @@ function HomePage () {
   );
 
   return (
-    <>
+    <div className={styles.homePageContainer}>
+      <TestStyles />
       <div className={homePageSlassesFirst}>Hello, world!</div>
       <div className={homePageSlassesSecond}>This is my first React app</div>
-    </>
+    </div>
   );
 }
 

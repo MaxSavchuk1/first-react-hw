@@ -1,8 +1,0 @@
-@import '../../common/styles/templates';
-@import '../../common/styles/vars';
-
-.footer {
-  @extend %flex-container;
-  @extend %panels-color;
-  margin-top: auto;
-}

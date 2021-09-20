@@ -1,13 +1,26 @@
 @import '../../common/styles/templates';
+%text-style {
+  font-size: 3em; // здесь еще были стили... пока так оставлю
+}
+
+.homePageContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
 
 .homePageContentFirst {
   @extend %flex-container;
+  @extend %text-style;
   margin-top: auto;
-  font-size: 3em;
 }
 
 .homePageContentSecond {
   @extend %flex-container;
+  @extend %text-style;
   margin-bottom: auto;
-  font-size: 3em;
 }
